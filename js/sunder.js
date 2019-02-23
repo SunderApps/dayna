@@ -1,37 +1,17 @@
-﻿var sunder = sunder || {
+﻿// OLD VERSION OF SUNDER LIBRARY
+var sunder = sunder || {
 
     // Parallax backgrounds
     lax: {
-        resize: function (event) {
-            var $window = $(window),
-                h = $window.height(),
-                w = $window.width(),
-                z = 100 + (20000 / w);
-                //z = 100 + (Math.pow(h, 2) / Math.pow(w, 2)) * 50;
-            $('.s_lax').css({ 'background-size': z + '%' });
-        },
-
         // Update parallax objects
         update: function (event) {
             $.each($('.s_lax'), function (index, element) {
                 $(element).css({ 'background-position-y': Math.floor(($(this).offset().top - $(window).scrollTop())  / 10) + '%' });
-                /*
-                var $distance = $(this).offset().top,
-                    $window = $(window);
-                var percent = ($distance - $window.scrollTop()) / 10;
-                $(element).css({ 'background-position': '50% ' + percent + '%' });
-                */
-                //console.log(percent);
             });
         },
 
         // Initialize parallax effect
         init: function () {
-            //$('.container-fluid').on('scroll', sunder.lax.update);
-            $(window).on('resize', sunder.lax.resize);
-            sunder.lax.resize();
-            sunder.lax.update();
-
             var magic = new ScrollMagic.Controller();
             var scene = new ScrollMagic.Scene({
                 triggerElement: '#s_lax_1',
@@ -68,7 +48,6 @@
                     w = $window.width(),
                     z = 100 + (Math.pow(h, 2) / Math.pow(w, 2)) * 50;
                     $('.s_lax_css_bck').css({ 'background-size': z + '%' });
-                //console.log(z + '%');
             },
 
             // Initialize parallax effect
@@ -87,7 +66,6 @@
 
         update: function () {
             $.each($(sunder.nav.selector), function (index, element) {
-                //console.log($(this.hash).offset().top + $(sunder.nav.container).scrollTop() - sunder.nav.height);
                 var top = $(this.hash).offset().top - sunder.nav.height;
                 if (top <= 0) {
                     $(sunder.nav.selector).removeClass('active');

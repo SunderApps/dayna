@@ -186,7 +186,6 @@ var dayna = dayna || {
     init: function () {
         sunder.anime.fade.in.init('.container-fluid');
         sunder.lax.init();
-        //dayna.lax.init();
         sunder.nav.init('.container-fluid', 'a[href^="#d_"]');
         dayna.hours();
         dayna.map.init();
@@ -194,6 +193,4 @@ var dayna = dayna || {
         dayna.videos.init();
     }
 };
-
-// $(document).ready(dayna.init);
 $(dayna.init);
