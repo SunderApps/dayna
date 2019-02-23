@@ -1,0 +1,192 @@
+﻿@s_nav_h_sm: 51.6px;
+@s_nav_h_lg: 56px;
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+.no-gutters {
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+body.s_text_w {
+    font-size: 1vw;
+}
+
+body.s_text_h {
+    font-size: 1vh;
+}
+
+nav {
+    height: @s_nav_h_sm;
+}
+
+form {
+    width: 50%;
+
+    .form-control {
+        width: 100%;
+    }
+
+    span.text-danger {
+        margin-bottom: 15px;
+    }
+}
+
+textarea {
+    resize: none;
+}
+
+.s_fade_in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.s_lax {
+    width: 100vw;
+    height: 250px;
+    background-position-x: 50%;
+    background-position-y: 150%;
+    background-repeat: no-repeat;
+    background-size: 200%;
+    box-shadow: inset 0px 0px 20px 3px black;
+    background-color: black;
+}
+
+.s_lax_css {
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: calc(100vh ~"-" @s_nav_h_sm);
+    margin-top: @s_nav_h_sm;
+    background-color: black;
+
+
+    .s_lax_css_grp {
+        position: relative;
+        transform-style: preserve-3d;
+        height: calc(100vh ~"-" @s_nav_h_sm);
+    }
+
+    .s_lax_css_grp_frt {
+        z-index: 100;
+    }
+
+    .s_lax_css_grp_bck {
+        z-index: 0;
+    }
+
+    .s_lax_css_grp_md {
+        top: -50%;
+        // Subtract half of top value
+        margin-bottom: -25%;
+    }
+
+    .s_lax_css_grp_sm {
+        top: -75%;
+        // Subtract half of top value
+        margin-bottom: -37.5%;
+    }
+
+    .s_lax_css_item {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        background-position-x: 50%;
+        background-position-y: 50%;
+        background-repeat: no-repeat;
+        background-size: 200%;
+        box-shadow: 0px 0px 20px 3px black;
+    }
+
+    .s_lax_css_frt {
+        transform: translateZ(0);
+        z-index: 100;
+    }
+
+    .s_lax_css_bck {
+        transform: translateZ(-1px) scale(2);
+        z-index: -100;
+        left: -15px;
+    }
+
+    .s_lax_css_rest {
+        position: relative;
+        z-index: 200;
+    }
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .s_lax {
+        height: 400px;
+    }
+    .s_lax_css {
+        .s_lax_css_item {
+            background-size: 175%;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .s_lax {
+        height: 500px;
+    }
+    .s_lax_css {
+        .s_lax_css_item {
+            background-size: 150%;
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    nav {
+        height: @s_nav_h_lg;
+    }
+
+    .s_lax {
+        height: 600px;
+    }
+    .s_lax_css {
+        height: calc(100vh ~"-" @s_nav_h_lg);
+        margin-top: @s_nav_h_lg;
+
+        .s_lax_css_item {
+            background-size: 125%;
+        }
+
+        .s_lax_css_grp {
+            height: calc(100vh ~"-" @s_nav_h_lg);
+        }
+
+        .s_lax_css_grp_md {
+            top: -25%;
+            // Subtract half of top value
+            margin-bottom: -12.5%;
+        }
+
+        .s_lax_css_grp_sm {
+            top: -50%;
+            // Subtract half of top value
+            margin-bottom: -25%;
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .s_lax {
+        height: 700px;
+    }
+    .s_lax_css {
+        .s_lax_css_item {
+            background-size: 100%;
+        }
+    }
+}
