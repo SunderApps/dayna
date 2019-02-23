@@ -16,26 +16,26 @@ var sunder = sunder || {
             var scene = new ScrollMagic.Scene({
                 triggerElement: '#s_lax_1',
                 triggerHook: 'onEnter',
-                duration: $(window).height()
+                duration: $(window).height() * 2
             })
             .setTween(new TimelineMax()
-                .add(new TweenMax.fromTo('#s_lax_1', 1, { 'background-position-y': '30%' }, { 'background-position-y': '70%' }), 0))
+                .add(new TweenMax.fromTo('#s_lax_1', 1, { 'background-position-y': '0%' }, { 'background-position-y': '100%' }), 0))
             .addTo(magic);
             var scene = new ScrollMagic.Scene({
                 triggerElement: '#s_lax_2',
                 triggerHook: 'onEnter',
-                duration: $(window).height()
+                duration: $(window).height() * 2
             })
             .setTween(new TimelineMax()
-                .add(new TweenMax.fromTo('#s_lax_2', 1, { 'background-position-y': '30%' }, { 'background-position-y': '70%' }), 0))
+                .add(new TweenMax.fromTo('#s_lax_2', 1, { 'background-position-y': '0%' }, { 'background-position-y': '100%' }), 0))
             .addTo(magic);
             var scene = new ScrollMagic.Scene({
                 triggerElement: '#s_lax_3',
                 triggerHook: 'onEnter',
-                duration: $(window).height()
+                duration: $(window).height() * 2
             })
             .setTween(new TimelineMax()
-                .add(new TweenMax.fromTo('#s_lax_3', 1, { 'background-position-y': '30%' }, { 'background-position-y': '70%' }), 0))
+                .add(new TweenMax.fromTo('#s_lax_3', 1, { 'background-position-y': '0%' }, { 'background-position-y': '100%' }), 0))
             .addTo(magic);
         },
 
