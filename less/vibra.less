@@ -1,0 +1,157 @@
+﻿.d_lax_vibra {
+    background-image: url('../../images/vibra_lax.jpg');
+    filter: brightness(1.5);
+}
+
+#d_vibra {
+    background-color: @d_slate_light;
+
+    img {
+        position: absolute;
+        bottom: 0;
+        width: 200vw;
+    }
+
+    .d_text {
+        padding: 10px 5% 70% 5%;
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            font-size: 25px;
+        }
+
+        h3 {
+            font-size: 20px;
+
+            a {
+                font-size: 1em;
+            }
+        }
+
+        p {
+            font-size: 17px;
+        }
+
+        a {
+            font-size: 13px;
+            margin-right: 10px;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    #d_vibra {
+        img {
+            left: -19%;
+        }
+
+        .d_text {
+            padding: 50px 5% 28% 35%;
+            
+            h1 {
+                font-size: 50px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+
+            h3 {
+                font-size: 25px;
+
+                a {
+                    font-size: 1em;
+                }
+            }
+
+            p, a {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    #d_vibra {
+        .d_text {
+            h1 {
+                font-size: 60px;
+            }
+
+            h2 {
+                font-size: 40px;
+            }
+
+            h3 {
+                font-size: 30px;
+            }
+
+            p, a {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    #d_vibra {
+        .d_text {
+            h1 {
+                font-size: 50px;
+            }
+
+            h2 {
+                font-size: 35px;
+            }
+
+            h3 {
+                font-size: 25px;
+            }
+
+            p, a {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    #d_vibra {
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: auto;
+        }
+
+        .d_text {
+            left: 50%;
+            width: 50%;
+            padding: 50px 5% 20% 0%;
+            
+            h1 {
+                font-size: 65px;
+            }
+
+            h2 {
+                font-size: 40px;
+            }
+
+            h3 {
+                font-size: 25px;
+            }
+
+            p, a {
+                font-size: 20px;
+            }
+        }
+    }
+}

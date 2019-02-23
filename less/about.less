@@ -1,0 +1,109 @@
+﻿#d_about {
+    background-color: @d_gray_light;
+
+    img {
+        display: block;
+
+        &#d_sherman {
+            margin-left: ~"calc(100vw - 65px)";
+            margin-top: 15px;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            max-width: 170px;
+            max-height: 170px;
+        }
+
+        &#d_dayna {
+            margin-top: -50px;
+            margin-left: auto;
+            height: 100%;
+        }
+    }
+
+    .d_text {
+        position: unset;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    #d_about {
+        img {
+            display: inline-block;
+
+            &#d_dayna {
+                display: inline-block;
+                margin-top: -250px;
+            }
+
+            &#d_sherman {
+                width: 10vw;
+                height: 10vw;
+                margin-left: 45vw;
+            }
+        }
+
+        .d_text {
+            display: inline-block;
+
+            h1 {
+                font-size: 50px;
+            }
+
+            p {
+                font-size: 20px;
+
+                &:last-child {
+                    width: ~"calc(100vw - 320px)"
+                }
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    #d_about {
+        img {
+            &#d_dayna {
+                margin-top: auto;
+            }
+        }
+
+        .d_text {
+            width: ~"calc(100vw - 320px - 5%)";
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    #d_about {
+        .d_text {
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    #d_about {
+        .d_text {
+            width: ~"calc(100vw - 340px - 20%)";
+
+            p {
+                &:last-child {
+                    width: unset;
+                }
+            }
+        }
+    }
+}

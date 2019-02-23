@@ -1,0 +1,230 @@
+﻿// Variables
+@d_gray_light: #818181;
+@d_gray_dark: #595959;
+
+@d_gray_dark_nav: #343a40;
+@d_gray_light_nav: rgba(255, 255, 255, 0.5);
+
+@d_slate_white: #e2e6e9;
+@d_slate_light: #b6bfc8;
+@d_slate_med: lightslategray;
+@d_slate_dark: darkslategray;
+@d_slate_black: #132020;
+
+@import 'home.less';
+@import 'impulse.less';
+@import 'vibra.less';
+@import 'manual.less';
+@import 'testimonials.less';
+@import 'about.less';
+@import 'hours.less';
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+body, html {
+    font-family: 'Palanquin', sans-serif;
+    overflow: hidden;
+}
+
+.container-fluid {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: calc(100vh ~"-" 56px);
+    margin-top: 56px;
+    background-color: black;
+}
+
+.row {
+    margin: 0px;
+}
+
+h1 {
+    font-size: 6.5em;
+    color: @d_slate_black;
+}
+
+h2 {
+    font-size: 3.5em;
+}
+
+h3 {
+    font-size: 2.25em;
+}
+
+p {
+    font-size: 1.75em;
+}
+
+sub, sup {
+    font-size: 52%;
+}
+
+.d_light {
+    h1 {
+        color: @d_slate_white;
+    }
+
+    h2 {
+        color: @d_slate_light;
+    }
+
+    h3 {
+        color: @d_slate_light;
+    }
+
+    p {
+        color: @d_slate_med;
+    }
+}
+
+nav {
+    height: 56px !important;
+
+    &.navbar {
+        padding: 0.5rem 0rem;
+    }
+
+    a.navbar-brand {
+        font-size: 1.6rem;
+        color: @d_slate_white;
+        line-height: 0px;
+    }
+
+    .s-ico-dr-dayna {
+        color: @d_slate_white;
+        margin-right: -10px;
+        margin-top: -3px;
+    }
+
+    button.navbar-toggler {
+        height: 30px;
+        width: 30px;
+        padding: 12px;
+        margin-right: 20px;
+        position: relative;
+        border: none;
+        outline: none;
+
+        &:hover span {
+            //transform: scale(1.1);
+        }
+
+        span, span:before, span:after {
+            height: 3px;
+            width: 26px;
+            background-color: @d_slate_white;
+            position: absolute;
+            display: block;
+            content: '';
+            transition: 500ms;
+        }
+
+        span {
+            top: 13px;
+            left: 1px;
+        }
+
+        span:before {
+            top: -7px;
+            left: 0px;
+        }
+
+        span:after {
+            bottom: -7px;
+            left: 0px;
+        }
+
+        &:not(.collapsed) span {
+            height: 30px;
+            width: 30px;
+            top: 0px;
+            left: 0px;
+            right: 64px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: solid 2px @d_slate_white;
+        }
+
+        &:not(.collapsed) span:before {
+            transform: rotate(45deg);
+            top: 11px;
+            left: -1px;
+            width: 28px;
+        }
+
+        &:not(.collapsed) span:after {
+            transform: rotate(-45deg);
+            bottom: 11px; 
+            left: -1px;
+            width: 28px;
+        }
+    }
+
+    button.navbar-toggler:focus, button.navbar-toggler:active {
+        outline: none;
+        border: none;
+        text-decoration: none;
+    }
+
+    li.nav-item {
+        font-size: 1rem;
+        margin-left: 20px;
+    }
+
+    .nav-link {
+        background-color: rgba(0,0,0,0.01);
+    }
+}
+
+.d_section {
+    overflow: hidden;
+    min-height: 50vh;
+    z-index: 10;
+    position: relative;
+
+    .d_text {
+        position: relative;
+        padding: 5%;
+        z-index: 50;
+    }
+}
+
+#d_modal {
+    iframe {
+        width: 100%;
+        max-width: 466px;
+        height: 262px;
+    }
+}
+
+footer {
+    p {
+        font-size: 14px;
+        color: @d_slate_white;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    footer {
+        p {
+            font-size: 20px;
+            color: @d_slate_white;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+ 
+}

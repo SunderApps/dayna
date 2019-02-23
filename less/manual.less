@@ -1,0 +1,95 @@
+﻿.d_lax_manual {
+    background-image: url('../../images/manual_lax.jpg');
+    filter: brightness(1.3);
+}
+
+#d_manual {
+    background-color: @d_slate_black;
+
+    img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .d_text {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 50%; 
+
+        h1 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    #d_manual {
+        .d_text {
+            h1 {
+                font-size: 60px;
+                text-align: left;
+            }
+
+            h2 {
+                font-size: 40px;
+                text-align: left;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    #d_manual {
+        .d_text {
+            padding: 50px 15%;
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    #d_manual {
+        .d_text {
+            margin-bottom: 50%;
+
+            h1 {
+                font-size: 65px;
+            }
+
+            h2 {
+                font-size: 40px;
+            }
+
+            h3 {
+                font-size: 25px;
+            }
+
+            p, a {
+                font-size: 20px;
+            }
+        }
+    }
+}

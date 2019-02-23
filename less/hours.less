@@ -1,0 +1,79 @@
+﻿#d_hours {
+    background-color: @d_slate_white;
+
+    p, td {
+        font-size: 20px;
+    }
+
+    table {
+        margin: auto;
+
+        td:nth-child(1) {
+            padding-right: 25px;
+        }
+    }
+
+    h4 {
+        margin: 50px;
+    }
+
+    .col-md-6 {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px 20px;
+
+        #d_map {
+            width: 100%;
+            height: 600px;
+            max-height: 60vh;
+            border-radius: 5%;
+        }
+    }
+
+    .col-md-6:nth-child(2) {
+        padding: 30px;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    #d_hours {
+        p, td {
+            font-size: 25px;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    #d_hours {
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    #d_hours {
+
+        td {
+            br {
+                display: none;
+            }
+        }
+
+        .col-md-6 {
+            padding: 25px;
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    #d_hours {
+
+        .col-md-6 {
+            padding: 75px;
+        }
+    }
+}

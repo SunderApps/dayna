@@ -1,0 +1,229 @@
+﻿#d_testimonials {
+    background-color: @d_slate_white;
+    box-shadow: inset 0px 0px 20px black;
+    margin-bottom: 0px;
+
+    .slick-track {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .slick-slide {
+        align-self: center;
+    }
+
+    .slick-arrow {
+        position: absolute;
+        background-color: rgba(0,0,0,0);
+        border-style: none;
+        z-index: 1001;
+        top: ~"calc(50% - 48px)";
+        font-size: 30px;
+        transition: 500ms;
+        cursor: pointer;
+    }
+
+    .slick-arrow:hover {
+        text-shadow: 0px 0px 10px @d_slate_med;
+        transform: scale(1.1);
+    }
+
+    .s-ico-left-open {
+        left: 0px;
+    }
+
+    .s-ico-right-open {
+        right: 0px;
+    }
+
+    .d_dots {
+        text-align: center;
+        padding: 0;
+
+        li {
+            margin: 0px 5px;
+            display: inline;
+            cursor: pointer;
+            font-size: 0px;
+
+            &.slick-active button {
+                color: @d_slate_dark;
+                background-color: @d_slate_dark;
+            }
+        }
+
+        button {
+            border-style: none;
+            border-radius: 50%;
+            color: @d_slate_black;
+            background-color: @d_slate_black;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            transition: 500ms;
+
+            &:hover {
+                color: @d_slate_med;
+                background-color: @d_slate_med;
+                box-shadow: 0px 0px 5px @d_slate_black;
+                transform: scale(1.1);
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .slick-prev {
+        left: 20px;
+        top: 50%;
+        content: "<i class='s-ico-left-open'></i>";
+    }
+
+    .slick-next {
+        right: 20px;
+        top: 50%;
+    }
+
+    .d_wrap {
+        padding: 35px;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 1200px;
+        margin: auto;
+
+        .d_long {
+            font-size: 1.5em;
+        }
+    }
+
+    p:nth-child(1) {
+        color: black;
+        font-size: 20px;
+        font-style: italic;
+        letter-spacing: -0.3px;
+
+        &.d_long {
+            font-size: 18px;
+        }
+    }
+
+    p:nth-child(2) {
+        color: darkslategray;
+        margin-bottom: 0px;
+        font-weight: 900;
+        font-size: 30px;
+        text-align: right;
+    }
+
+    p:nth-child(1)::before {
+        content: open-quote;
+    }
+
+    p:nth-child(1)::after {
+        content: close-quote;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    #d_testimonials {
+        .slick-arrow {
+            font-size: 35px;
+        }
+
+        .s-ico-left-open {
+            left: 5px;
+        }
+
+        .s-ico-right-open {
+            right: 5px;
+        }
+
+        .d_wrap {
+            padding: 100px;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    #d_testimonials {
+        .slick-arrow {
+            font-size: 40px;
+        }
+
+        .s-ico-left-open {
+            left: 10px;
+        }
+
+        .s-ico-right-open {
+            right: 10px;
+        }
+
+        .d_wrap {
+
+            p:nth-child(1) {
+                font-size: 25px;
+
+                &.d_long {
+                    font-size: 20px;
+                }
+            }
+
+            p:nth-child(2) {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    #d_testimonials {
+        .slick-arrow {
+            font-size: 45px;
+        }
+
+        .d_wrap {
+
+            p:nth-child(1) {
+                font-size: 30px;
+
+                &.d_long {
+                    font-size: 25px;
+                }
+            }
+
+            p:nth-child(2) {
+                font-size: 45px;
+            }
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    #d_testimonials {
+        .slick-arrow {
+            font-size: 50px;
+        }
+
+        .d_wrap {
+
+            p:nth-child(1) {
+                font-size: 35px;
+
+                &.d_long {
+                    font-size: 30px;
+                }
+            }
+
+            p:nth-child(2) {
+                font-size: 50px;
+            }
+        }
+    }
+}
